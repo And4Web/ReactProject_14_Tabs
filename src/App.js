@@ -38,7 +38,9 @@ function App() {
       {jobs.map((job, index) => {
         return (
           <div style={{ display: "flex", flexDirection: "row" }}>
-            <button key={job.id}>{job.company}</button>
+            <button key={job.id} onClick={() => setValue(index)}>
+              {job.company}
+            </button>
           </div>
         );
       })}
